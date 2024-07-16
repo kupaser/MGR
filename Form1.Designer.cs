@@ -68,15 +68,16 @@
             // печатьToolStripMenuItem
             // 
             печатьToolStripMenuItem.Name = "печатьToolStripMenuItem";
-            печатьToolStripMenuItem.Size = new Size(148, 22);
+            печатьToolStripMenuItem.Size = new Size(180, 22);
             печатьToolStripMenuItem.Text = "Печать";
             печатьToolStripMenuItem.Click += печатьToolStripMenuItem_Click;
             // 
             // информацияToolStripMenuItem
             // 
             информацияToolStripMenuItem.Name = "информацияToolStripMenuItem";
-            информацияToolStripMenuItem.Size = new Size(148, 22);
+            информацияToolStripMenuItem.Size = new Size(180, 22);
             информацияToolStripMenuItem.Text = "Информация";
+            информацияToolStripMenuItem.Click += информацияToolStripMenuItem_Click;
             // 
             // button1
             // 

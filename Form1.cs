@@ -46,7 +46,7 @@ namespace MGR
                 }
             }
         }
-        
+
         /// <summary>
         /// Код для кнопки "удалить" открывающийся при пкм по ноде (сгенерировано)
         /// </summary>
@@ -113,7 +113,7 @@ namespace MGR
                 MessageBox.Show($"Ошибка при поиске нужной записи при открытии ноды:\n{ex.Message}");
             }
         }
-       
+
         /// <summary>
         /// код выполняющийся во время закрытия формы (сохранение списка в json)
         /// </summary>
@@ -126,7 +126,7 @@ namespace MGR
         /// <summary>
         /// Метод для обновления нод в Treeview и сортировки элементов списка headaches
         /// </summary>
-        
+
         public void Refresher()
         {
             try
@@ -208,7 +208,7 @@ namespace MGR
             catch (Exception ex)
             {
                 MessageBox.Show($"Ошибка во время открытия word-документа: {ex.Message}");
-            }            
+            }
         }
 
         #region READWRITE
@@ -264,5 +264,10 @@ namespace MGR
             }
         }
         #endregion
+
+        private void информацияToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show($"Всего записей: {headaches.Count}\nСредний балл боли от мигрени по всем записям: {headaches.Average(x=>x.goals)}");
+        }
     }
 }
