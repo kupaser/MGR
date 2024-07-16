@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             treeView1 = new TreeView();
             menuStrip1 = new MenuStrip();
             менюToolStripMenuItem = new ToolStripMenuItem();
@@ -69,6 +70,7 @@
             печатьToolStripMenuItem.Name = "печатьToolStripMenuItem";
             печатьToolStripMenuItem.Size = new Size(148, 22);
             печатьToolStripMenuItem.Text = "Печать";
+            печатьToolStripMenuItem.Click += печатьToolStripMenuItem_Click;
             // 
             // информацияToolStripMenuItem
             // 
@@ -106,6 +108,8 @@
             Controls.Add(button1);
             Controls.Add(treeView1);
             Controls.Add(menuStrip1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
             Name = "Form1";
             Text = "Слежу за мигренью";

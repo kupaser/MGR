@@ -7,13 +7,16 @@ using System.Threading.Tasks;
 
 namespace MGR.sets
 {
+    /// <summary>
+    /// Мигрень. изначально планировалось использовать EF для хранения, 
+    /// Отказался, потому что избыточно
+    /// </summary>
     public class Headache
     {
-        public Guid Id { get; set; }
+        //public Guid Id { get; set; }
         public DateTime Date { get; set; }
         public int Timecount { get; set; }
         public int goals { get; set; }
         public string? Description { get; set; }
-        public string? Solution { get; set; }
     }
 }

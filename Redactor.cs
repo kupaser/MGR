@@ -19,7 +19,6 @@ namespace MGR
             InitializeComponent();
             this.Headache = headache;
             richTextBox1.Text = headache.Description;
-            richTextBox2.Text = headache.Solution;
             trackBar1.Value = headache.goals;
             numericUpDown1.Value = headache.Timecount / 60;
             numericUpDown2.Value = headache.Timecount % 60;
@@ -47,12 +46,12 @@ namespace MGR
         {
             try
             {
-                if (richTextBox1.Text == string.Empty || richTextBox2.Text == string.Empty)
+                if (richTextBox1.Text == string.Empty)
                 {
-                    throw new Exception("Поля не могут быть пустыми!");
+                    throw new Exception("Поле \"что предшествовало боли\" не может быть пустым");
                 }
                 Headache.Description = richTextBox1.Text;
-                Headache.Solution = richTextBox2.Text;
+                
                 Headache.goals = trackBar1.Value;
                 Headache.Timecount = (int)(numericUpDown1.Value * 60 + numericUpDown2.Value);
                 Headache.Date = dateTimePicker1.Value;

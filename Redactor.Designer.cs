@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Redactor));
             button1 = new Button();
             button2 = new Button();
             groupBox1 = new GroupBox();
-            groupBox6 = new GroupBox();
-            richTextBox2 = new RichTextBox();
             groupBox5 = new GroupBox();
             dateTimePicker1 = new DateTimePicker();
             groupBox4 = new GroupBox();
@@ -45,7 +44,6 @@
             groupBox2 = new GroupBox();
             trackBar1 = new TrackBar();
             groupBox1.SuspendLayout();
-            groupBox6.SuspendLayout();
             groupBox5.SuspendLayout();
             groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
@@ -58,9 +56,9 @@
             // button1
             // 
             button1.BackColor = SystemColors.ControlLight;
-            button1.Location = new Point(202, 458);
+            button1.Location = new Point(251, 398);
             button1.Name = "button1";
-            button1.Size = new Size(176, 30);
+            button1.Size = new Size(127, 30);
             button1.TabIndex = 0;
             button1.Text = "Отмена";
             button1.UseVisualStyleBackColor = false;
@@ -68,9 +66,9 @@
             // 
             // button2
             // 
-            button2.Location = new Point(202, 398);
+            button2.Location = new Point(6, 398);
             button2.Name = "button2";
-            button2.Size = new Size(176, 54);
+            button2.Size = new Size(239, 30);
             button2.TabIndex = 0;
             button2.Text = "Применить изменения";
             button2.UseVisualStyleBackColor = true;
@@ -78,7 +76,6 @@
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(groupBox6);
             groupBox1.Controls.Add(button1);
             groupBox1.Controls.Add(button2);
             groupBox1.Controls.Add(groupBox5);
@@ -87,35 +84,16 @@
             groupBox1.Controls.Add(groupBox2);
             groupBox1.Location = new Point(12, 12);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(385, 495);
+            groupBox1.Size = new Size(385, 435);
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
-            // 
-            // groupBox6
-            // 
-            groupBox6.Controls.Add(richTextBox2);
-            groupBox6.Location = new Point(6, 338);
-            groupBox6.Name = "groupBox6";
-            groupBox6.Size = new Size(190, 150);
-            groupBox6.TabIndex = 6;
-            groupBox6.TabStop = false;
-            groupBox6.Text = "Из-за чего боль прошла?";
-            // 
-            // richTextBox2
-            // 
-            richTextBox2.BackColor = Color.Honeydew;
-            richTextBox2.Location = new Point(3, 22);
-            richTextBox2.Name = "richTextBox2";
-            richTextBox2.Size = new Size(181, 122);
-            richTextBox2.TabIndex = 0;
-            richTextBox2.Text = "";
             // 
             // groupBox5
             // 
             groupBox5.Controls.Add(dateTimePicker1);
-            groupBox5.Location = new Point(202, 338);
+            groupBox5.Location = new Point(6, 338);
             groupBox5.Name = "groupBox5";
-            groupBox5.Size = new Size(176, 54);
+            groupBox5.Size = new Size(372, 54);
             groupBox5.TabIndex = 5;
             groupBox5.TabStop = false;
             groupBox5.Text = "Когда это произошло?";
@@ -127,7 +105,7 @@
             dateTimePicker1.MaxDate = new DateTime(2024, 7, 15, 0, 0, 0, 0);
             dateTimePicker1.MinDate = new DateTime(2010, 12, 31, 0, 0, 0, 0);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(170, 23);
+            dateTimePicker1.Size = new Size(366, 23);
             dateTimePicker1.TabIndex = 4;
             dateTimePicker1.Value = new DateTime(2024, 7, 15, 0, 0, 0, 0);
             // 
@@ -183,7 +161,7 @@
             // groupBox3
             // 
             groupBox3.Controls.Add(richTextBox1);
-            groupBox3.Location = new Point(6, 22);
+            groupBox3.Location = new Point(6, 11);
             groupBox3.Name = "groupBox3";
             groupBox3.Size = new Size(372, 183);
             groupBox3.TabIndex = 2;
@@ -223,13 +201,14 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(402, 512);
+            ClientSize = new Size(402, 457);
             Controls.Add(groupBox1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Redactor";
             Text = "Редактор";
             Load += Redactor_Load;
             groupBox1.ResumeLayout(false);
-            groupBox6.ResumeLayout(false);
             groupBox5.ResumeLayout(false);
             groupBox4.ResumeLayout(false);
             groupBox4.PerformLayout();
@@ -258,7 +237,5 @@
         private NumericUpDown numericUpDown2;
         private GroupBox groupBox5;
         private DateTimePicker dateTimePicker1;
-        private GroupBox groupBox6;
-        private RichTextBox richTextBox2;
     }
 }
